@@ -7,6 +7,7 @@ declare namespace Cypress {
     verifyScroll(): Chainable<any>;
     isScrolledTo(selector: string): Chainable<any>;
     validateText(selector: string, result: string[]): Chainable<any>;
+    validateLink(selector: string, result: string[]): Chainable<any>;
     /**
      * Custom command to select DOM elements using XPath.
      * @example cy.xpath('//ul[@id="menu-main-menu"]/li')

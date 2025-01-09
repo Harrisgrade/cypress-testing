@@ -36,3 +36,12 @@ Cypress.Commands.add("validateText", (selector, result) => {
     cy.wrap(actualMessages).should("deep.eq", result);
   });
 });
+
+Cypress.Commands.add("validateLink", (selector, result) => {
+  cy.xpath(selector)
+    .find("a")
+    .then(($el) => {
+      const attr = $el.map((i, el) => Cypress.$(el).attr("href"));
+      cy.wrap(attr.get()).should("deep.equal", result);
+    });
+});

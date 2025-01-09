@@ -7,4 +7,5 @@ export enum selectors {
   whatCustomersSay = "[data-id='6d80c90']",
   runningNumbers = "[data-id='5525fd5']",
   insightTrends = "[data-id='6e24a22']",
+  carousel = "[data-id='d8a85d8']",
 }
